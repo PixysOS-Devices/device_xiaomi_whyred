@@ -25,10 +25,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Inherit from whyred device
 $(call inherit-product, device/xiaomi/whyred/device.mk)
 
-# Inherit some common Superior stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
+# Inherit some common pixys stuff
+$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
 
-PRODUCT_NAME := superior_whyred
+PRODUCT_NAME := pixys_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
@@ -48,4 +48,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 TARGET_VENDOR := Xiaomi
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_LAUNCHER := lawnchair
+TARGET_GAPPS_ARCH := arm64
