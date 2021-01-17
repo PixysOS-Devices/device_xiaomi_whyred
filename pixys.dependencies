@@ -6,5 +6,10 @@
  {
    "repository": "kernel_xiaomi_whyred",
    "target_path": "kernel/xiaomi/whyred"
+ },
+ {
+   "repository": "LineageOS/android_packages_resources_devicesettings",
+   "target_path": "packages/resources/devicesettings",
+   "branch": "lineage-18.1"
  }
 ]
