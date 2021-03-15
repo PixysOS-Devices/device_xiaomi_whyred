@@ -25,10 +25,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Inherit from whyred device
 $(call inherit-product, device/xiaomi/whyred/device.mk)
 
-# Inherit some common Superior stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
+# Inherit from custom vendor
+$(call inherit-product-if-exist, vendor/MiuiCamera/config.mk)
 
-PRODUCT_NAME := superior_whyred
+# Inherit some common Pixys stuff.
+$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
+
+PRODUCT_NAME := pixys_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
@@ -50,4 +53,4 @@ TARGET_VENDOR := Xiaomi
 IS_PHONE := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
-TARGET_SCREEN_DENSITY := 420
+TARGET_SCREEN_DENSITY := 440
